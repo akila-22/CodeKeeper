@@ -1,0 +1,104 @@
+<div class="popup-header">
+  <mat-slide-toggle (change)="translate($event)"></mat-slide-toggle>
+  <i class="fa-solid fa-xmark" data-bs-dismiss="modal" aria-label="Close"></i>
+</div>
+<div class="p-4">
+  <h2 class="h2-title">Intro</h2>
+  <ul class="ul-list" *ngIf="langEng; else langOther">
+    <li>Javascript client-side scripting web development kaga use panuvanga</li>
+    <li>
+      Developers use panradhukum dynamic ah content ah change panradhuku aprm
+      events lam oru web page la set panikalam
+    </li>
+    <li>
+      Full page ah reload panama users webpage oda real-time interact pana js
+      help pannum
+    </li>
+    <li>
+      Server-side rendering ku use aagum mobile app development game development
+      ku lam use aagum
+    </li>
+  </ul>
+  <ng-template #langOther>
+    <ul class="ul-list">
+      <li>
+        JavaScript is a versatile programming language primarily used for
+        client-side scripting in web development.
+      </li>
+      <li>
+        It enables developers to add interactivity, dynamic content, and
+        event-driven behavior to web pages.
+      </li>
+      <li>
+        With JavaScript, you can respond to user actions, modify page content in
+        real-time, and create engaging user experiences without reloading the
+        entire page.
+      </li>
+      <li>
+        It is also used for server-side programming, mobile app development, and
+        game development.
+      </li>
+    </ul>
+  </ng-template>
+
+  <hr />
+
+  <h2 class="h2-title">Releases</h2>
+  <div class="versions">
+    <p>
+      ES5<br />
+      ECMAScript
+    </p>
+    <span>→</span>
+    <p>
+      ES6<br />
+      ES2015
+    </p>
+    <span>→</span>
+    <p>
+      ES7<br />
+      ES2016
+    </p>
+    <span>→</span>
+    <p>
+      ES8<br />
+      ES2017
+    </p>
+    <span>→</span>
+    <p>
+      ES9<br />
+      ES2018
+    </p>
+    <span>→</span>
+    <p>
+      ES10<br />
+      ES2019
+    </p>
+    <span>→</span>
+    <p>
+      ES11<br />
+      ES2020
+    </p>
+  </div>
+
+  <hr />
+
+  <h2 class="h2-title">Strict Mode</h2>
+  <ul class="ul-list" *ngIf="langEng; else strictOther">
+    <li>Strict mode use pana nambe secure code panalam.</li>
+    <li>Indha line dha js la 1st line ah irukanum</li>
+    <li>Developer console la error la kamikum</li>
+  </ul>
+  <ng-template #strictOther>
+    <ul class="ul-list">
+      <li>
+        Strict is a special mode that we activate in the JavaScript which make
+        it easier to write a secure code.
+      </li>
+      <li>This line must be the first line of the JavaScript Code.</li>
+      <li>It creates visible errors in the developer console.</li>
+    </ul>
+  </ng-template>
+  <app-js-code [showCode]="'strictMode'"></app-js-code>
+  <hr />
+</div>

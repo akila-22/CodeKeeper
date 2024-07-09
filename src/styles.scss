@@ -1,1 +1,349 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "../node_modules/prismjs/themes/prism.css";
+@import "../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+}
+
+body {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1rem !important;
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.mat-typography {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 0;
+    font-family: "Manrope", sans-serif;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+
+  h1 {
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+  }
+}
+
+.filter-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 0.4rem;
+
+  .filter-form01 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    input {
+      padding: 0.8rem 1rem;
+      background-color: #474747;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .filter01 {
+      width: 14rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .filter02 {
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+
+    .popup-search {
+      font-size: 1.5rem;
+    }
+
+    .popup-close {
+      font-size: 2rem;
+    }
+  }
+
+  .filter-form02 {
+    .block {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 0.8rem;
+
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 500;
+        padding: 0.8rem 1rem;
+        border-radius: 4px;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: #2c2c2c;
+        }
+      }
+
+      .active {
+        background-color: #2c2c2c;
+      }
+    }
+  }
+}
+
+.cover-div {
+  width: 100%;
+  height: 150px;
+  background-image: url(./assets/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  div {
+    position: absolute;
+    bottom: -50px;
+    left: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 36px;
+
+    h2 {
+      font-size: 80px;
+    }
+
+    p {
+      font-size: 26px;
+      font-weight: 900;
+    }
+  }
+}
+
+.modal-content {
+  background-color: #202020 !important;
+  border: 1px solid #474747;
+
+  i {
+    color: white;
+  }
+}
+
+.popup-component {
+  background-color: #000000 !important;
+
+  i {
+    color: white;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 24rem 1fr;
+  align-items: start;
+  gap: 4rem;
+  padding: 1rem 3rem;
+  margin-top: 7rem;
+
+  nav {
+    border: 2px solid rgb(39, 39, 39);
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1rem;
+
+    a {
+      border-radius: 0.4rem;
+      padding: 0.4rem 0.6rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #202020;
+      }
+    }
+  }
+}
+
+// Mat AutoComplete
+.mat-mdc-option {
+  min-height: 3.6rem !important;
+  font-size: 1.4rem !important;
+  padding-left: 0.8rem !important;
+  padding-right: 0.8rem !important;
+}
+
+.mat-mdc-autocomplete-panel {
+  padding: 0.4rem 0 !important;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.062) !important;
+  border-top: 0.1rem solid #474747;
+  border-right: 0.1rem solid #474747;
+  border-left: 0.1rem solid #474747;
+  border-bottom: 0.1rem solid #474747;
+  background-color: #202020 !important;
+  color: white !important;
+}
+
+.mat-mdc-option.mdc-list-item {
+  color: white !important;
+
+  &:hover {
+    background-color: #474747 !important;
+  }
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 9999 !important;
+}
+
+.topics-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
+
+  a {
+    padding: 0.8rem 1rem;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1.6rem !important;
+
+    i {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6868fd;
+      font-size: 1.8rem;
+    }
+
+    &:hover {
+      background-color: #202020 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .topics-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  main {
+    grid-template-columns: 18rem 1fr;
+  }
+
+  .topics-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.active-link {
+  color: #6868fd;
+  font-weight: 600;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+// Components
+.callout {
+  border-left: 0.2rem solid #6868fd;
+  color: #6868fd;
+  padding: 0.2rem 0.2rem 0.2rem 1rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.ul-list {
+  line-height: 2.4rem;
+
+  li {
+    font-size: 1.4rem;
+  }
+}
+
+.h2-title {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2rem !important;
+  margin-bottom: 1.4rem !important;
+}
+
+hr {
+  margin: 2rem 0 !important;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: rgb(255, 92, 182) !important;
+}
+
+span.token.operator {
+  background-color: transparent !important;
+}

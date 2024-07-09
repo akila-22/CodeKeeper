@@ -1,0 +1,16 @@
+.versions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  p {
+    background-color: #202020;
+    width: 12rem;
+    height: 8rem;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

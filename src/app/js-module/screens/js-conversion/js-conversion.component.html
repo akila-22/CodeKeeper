@@ -1,0 +1,54 @@
+<div class="popup-header">
+  <mat-slide-toggle (change)="translate($event)"></mat-slide-toggle>
+  <i class="fa-solid fa-xmark" data-bs-dismiss="modal" aria-label="Close"></i>
+</div>
+
+<div class="p-4">
+  <h2 class="h2-title">Type Conversion</h2>
+  <ul class="ul-list" *ngIf="langEng; else conversion">
+    <li>
+      Nambalave oru type la irundhu inoru type ku value va convert panuvom
+    </li>
+  </ul>
+  <ng-template #conversion>
+    <ul class="ul-list">
+      <li>
+        Type Conversion is when we manually convert from one type to another.
+      </li>
+    </ul>
+  </ng-template>
+  <app-js-code [showCode]="'type-conversion'"></app-js-code>
+  <hr />
+
+  <h2 class="h2-title">Type Coercion</h2>
+  <ul class="ul-list" *ngIf="langEng; else coercion">
+    <li>Javascript automatic type convert panikum</li>
+    <li>
+      String nadula oru number irundha andha number string ah convert aagidum
+    </li>
+    <li>
+      Type coercion js la illana nmaba dha manual ah type convert panra mathri
+      irukum
+    </li>
+    <li>Ella operator um type coercion panadhu</li>
+  </ul>
+  <ng-template #coercion>
+    <ul class="ul-list">
+      <li>
+        In type coercion the js automatically convert type behind the scene for
+        us.
+      </li>
+      <li>
+        Whenever there is a operator between a string and the number will be
+        converted to a string.
+      </li>
+      <li>
+        If js don't have type coercion we need to use the string function in
+        between them.
+      </li>
+      <li>Not all operators have type coercion</li>
+    </ul>
+  </ng-template>
+  <app-js-code [showCode]="'type-conversion'"></app-js-code>
+  <hr />
+</div>
