@@ -1,1 +1,49 @@
-<p>js-ifelse works!</p>
+<div class="popup-header">
+  <mat-slide-toggle (change)="translate($event)"></mat-slide-toggle>
+  <i class="fa-solid fa-xmark" data-bs-dismiss="modal" aria-label="Close"></i>
+</div>
+
+<div class="p-4">
+  <h2 class="h2-title">If Else</h2>
+  <ul class="ul-list" *ngIf="langEng; else ifElse">
+    <li>if/else statement ah control structure num soluvanga</li>
+    <li>
+      Ean apdi soluvanga if/else la namaku ethana controls venumo veachikalam
+      namba conditions ku eatha mathri
+    </li>
+    <li>
+      Namaku endha block of code run aaganum aaga kudadhu nu namba set panikalam
+    </li>
+    <li>If/else ulla declare pana block ah veliya access pana mudiyadhu</li>
+  </ul>
+  <ng-template #ifElse>
+    <ul class="ul-list">
+      <li>if/else statement also known as control section.</li>
+      <li>
+        Because this structure allows us to have more control over the way that
+        our code is executed.
+      </li>
+      <li>
+        We can control block of the code that can execute and block of the code
+        the cannot execute.
+      </li>
+      <li>
+        The condition declared inside of the if/else block will not be
+        accessible outside of the block.
+      </li>
+    </ul>
+  </ng-template>
+  <app-js-code [showCode]="'if-else'"></app-js-code>
+  <hr />
+  <h2 class="h2-title">If Else</h2>
+  <ul class="ul-list" *ngIf="langEng; else elseIf">
+    <li>If part false ah irundhuchina else if run aagum</li>
+  </ul>
+  <ng-template #elseIf>
+    <ul class="ul-list">
+      <li>If the if part is false then js move to else if part.</li>
+    </ul>
+  </ng-template>
+  <app-js-code [showCode]="'if-else'"></app-js-code>
+  <hr />
+</div>

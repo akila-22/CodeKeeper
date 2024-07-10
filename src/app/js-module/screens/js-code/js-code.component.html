@@ -186,7 +186,7 @@ if (favColor === “pink”) &#123;
 </pre>
 </div>
 
-<div *ngIf="showCode === 'if-switch'" class="code-container">
+<div *ngIf="showCode === 'switch-case'" class="code-container">
   <pre class="line-numbers">
 <code class="language-javascript">
 const day = “monday”;
@@ -457,17 +457,35 @@ calcAge(years);
 const animals = ['dog', 'cat', 'cow'];
 animals.push('pig');
 // Changes : ['dog', 'cat', 'cow', 'pig']
+</code>
+</pre>
+</div>
 
+<div *ngIf="showCode === 'array-04'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
 // Unshift
 const animals = ['dog', 'cat', 'cow', 'pig'];
 animals.unshift('horse');
 // Changes :  ['horse', 'dog', 'cat', 'cow', 'pig']
+</code>
+</pre>
+</div>
 
+<div *ngIf="showCode === 'array-05'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
 // Pop
 const animals = ['dog', 'cat', 'cow', 'pig'];
 animals.pop('pig');
 // Changes : ['dog', 'cat', 'cow']
+</code>
+</pre>
+</div>
 
+<div *ngIf="showCode === 'array-06'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
 // Shift
 const animals = ['dog', 'cat', 'cow'];
 animals.shift('dog');
@@ -476,7 +494,7 @@ animals.shift('dog');
 </pre>
 </div>
 
-<div *ngIf="showCode === 'array-04'" class="code-container">
+<div *ngIf="showCode === 'array-07'" class="code-container">
   <pre class="line-numbers">
 <code class="language-javascript">
 // indexOf()
