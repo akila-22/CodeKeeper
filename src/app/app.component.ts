@@ -90,7 +90,7 @@ export class AppComponent {
         this.newoptsub = of([]);
       }
     }
-    this.filterForm.get('optionsControl')?.reset();
+    // this.filterForm.get('optionsControl')?.reset();
   }
   filterFn(value: string): string[] {
     const filterValue = value.toLowerCase();
