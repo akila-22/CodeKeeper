@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable, map, of, startWith } from 'rxjs';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -36,7 +35,23 @@ export class AppComponent {
       Scss: ['Scss Intro', 'Scss Comments'],
     },
     {
-      Javascript: ['Js Intro', 'Js Comments'],
+      Javascript: [
+        'Intro',
+        'Comments',
+        'Variables',
+        'Operators',
+        'Template Literals',
+        'Conversion & Coercion',
+        'Truthy & Falsy',
+        'Boolean',
+        'Statement & Expression',
+        'Array',
+        'Prompt',
+        'If else',
+        'Switch case',
+        'Function',
+        'Project',
+      ],
     },
     {
       Typescript: ['Typescript Intro', 'Typescript Comments'],
@@ -82,6 +97,7 @@ export class AppComponent {
 
   subclick() {
     const selectedOption = this.filterForm.get('optionsControl')?.value;
+
     for (let i = 0; i < this.optionSub.length; i++) {
       if (this.optionSub[i][selectedOption]) {
         this.newoptsub = of(this.optionSub[i][selectedOption]);
@@ -90,7 +106,19 @@ export class AppComponent {
         this.newoptsub = of([]);
       }
     }
-    // this.filterForm.get('optionsControl')?.reset();
+      
+  }
+  some() {
+    // const selectedOption = this.filterForm.get('optionsControl')?.value;
+
+    const selectedOption2 = this.filterForm.get('optionsControlSub')?.value;
+    console.log('hi');
+    if (selectedOption2 === '') {
+      this.filterForm.get('optionsControl')?.reset();
+      this.filterForm.get('optionsControlSub')?.disable();    
+    }
+   
+    
   }
   filterFn(value: string): string[] {
     const filterValue = value.toLowerCase();
@@ -98,7 +126,30 @@ export class AppComponent {
       option.toLowerCase().includes(filterValue)
     );
   }
+  moduleclick() {
+    const selectedOption = this.filterForm.get('optionsControl')?.value;
 
+    if (selectedOption !== '') {
+      this.filterForm.get('optionsControlSub')?.enable();
+    }
+    else{
+      this.filterForm.get('optionsControlSub')?.reset();
+
+    }
+    // if(selectedOption === ''){
+    //   this.filterForm.get('optionsControlSub')?.reset(); 
+    // }
+    // if (this.filterForm.get('optionsControl')?.value === '') {
+    // }
+  }
+  resetsearch() {
+    this.filterForm.reset();
+    const selectedOption = this.filterForm.get('optionsControl')?.value;
+
+    if (selectedOption !== '') {
+      this.filterForm.get('optionsControlSub')?.disable();
+    }
+  }
   filterSubFn(value: string): string[] {
     const filterValue = value.toLowerCase();
     return this.options.filter((option) =>
