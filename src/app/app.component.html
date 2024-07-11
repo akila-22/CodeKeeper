@@ -4,6 +4,7 @@
     class="fa-solid fa-magnifying-glass"
     data-bs-toggle="modal"
     data-bs-target="#searchMain"
+    (click)="resetsearch()"
   ></i>
 </header>
 
@@ -83,11 +84,13 @@
               formControlName="optionsControl"
               [matAutocomplete]="filterMain"
               placeholder="Language"
+              (click)="moduleclick()"
             />
             <mat-autocomplete #filterMain="matAutocomplete">
               <mat-option
                 *ngFor="let option of filteredOptions | async"
                 [value]="option"
+                (click)="subclick()"
                 >{{ option }}</mat-option
               >
             </mat-autocomplete>
@@ -98,7 +101,7 @@
               formControlName="optionsControlSub"
               [matAutocomplete]="filterSub"
               placeholder="Search in CodeKeeper..."
-              (click)="subclick()"
+              (keyup)="some()"
             />
             <mat-autocomplete #filterSub="matAutocomplete">
               <mat-option
@@ -110,6 +113,9 @@
 
             <button type="button" class="popup-search">
               <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button (click)="resetsearch()">
+              <i class="fa-solid fa-rotate-right"></i>
             </button>
             <button type="button" data-bs-dismiss="modal" class="popup-close">
               <i class="fa-solid fa-xmark"></i>
