@@ -17,6 +17,7 @@ import { JsSwitchComponent } from './screens/js-switch/js-switch.component';
 import { JsFunctionsComponent } from './screens/js-functions/js-functions.component';
 import { JsProject01Component } from './screens/js-project01/js-project01.component';
 import { JsConversionComponent } from './screens/js-conversion/js-conversion.component';
+import { JsAdvIntroComponent } from './screens/js-adv-intro/js-adv-intro.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,7 @@ const routes: Routes = [
       { path: 'JsSwitchRoute', component: JsSwitchComponent },
       { path: 'JsFunctionsRoute', component: JsFunctionsComponent },
       { path: 'JsProject01Route', component: JsProject01Component },
+      { path: 'JsAdvIntroRoute', component: JsAdvIntroComponent },
     ],
   },
 ];

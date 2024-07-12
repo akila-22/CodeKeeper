@@ -514,3 +514,95 @@ console.log(`You have a pet`);
 </code>
 </pre>
 </div>
+
+<div *ngIf="showCode === 'js-adv-intro01'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
+const closeModal = () => &#123;
+	modal.classList.add("hidden");
+	overlay.classList.add("hidden");
+&#125;;
+overlay.addEventListener("click", closeModal);
+                                      ⤵
+// Passing a function into another function as a argument is
+// first class function
+</code>
+</pre>
+</div>
+
+<div *ngIf="showCode === 'js-adv-intro02'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
+let x = 23;
+let y = 19;
+x = "Jonas";
+      ⤵
+// Data typesof variables is automatically changed
+</code>
+</pre>
+</div>
+
+<div *ngIf="showCode === 'js-adv-intro03'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
+const job = 'Teacher'
+</code>
+</pre>
+</div>
+
+<div *ngIf="showCode === 'js-adv-intro04'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
+function calcAge() &#123;
+	const now = 2024;
+&#125;
+</code>
+</pre>
+</div>
+
+<div *ngIf="showCode === 'js-adv-intro05'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
+if() &#123;&#125;
+</code>
+</pre>
+</div>
+
+<div *ngIf="showCode === 'js-adv-intro06'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
+const myName = "Jonas";
+function first() &#123;
+	const age = 30;
+	if(age >= 30) &#123;
+		const decade = 3;
+		var millenial = true;
+  &#125;
+	
+	function second() &#123;
+		const job = "Teacher",
+		console.log(`$&#123;myName&#125; is a $&#123;age - old&#125; $&#123;Job&#125;`);
+  &#125;
+	second();
+&#125;
+</code>
+</pre>
+</div>
+
+<div *ngIf="showCode === 'js-adv-intro07'" class="code-container">
+  <pre class="line-numbers">
+<code class="language-javascript">
+// Global Scope
+myName = "Jonas";
+     ⤴
+first()
+age = 30
+myName = "Jonas"
+     ⤴
+Second()
+job = "Teacher"
+age = 30
+myName = "Jonas"
+</code>
+</pre>
+</div>
